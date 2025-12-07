@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante Caseiro - Comida Caseira com Qualidade">
+    <meta name="keywords" content="restaurante, comida caseira, delivery, comida">
+    <meta name="author" content="Restaurante Caseiro">
+    <title>Restaurante Caseiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-whatsapp="558899999999">
+    
+    <header>
+        <h1 class="logo">Restaurante Caseiro</h1>
+
+        <nav>
+            <a href="#sobre">Nossa História</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#combos">Combos</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- BANNER / HERO -->
+    <section id="banner" class="hero">
+        <div class="hero-text">
+            <h2>Comida Caseira, Sabor e Qualidade!</h2>
+            <p>Local reservado perfeito para você e sua familia.</p>
+            <a href="#cardapio" class="btn">Fazer Pedido</a>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="secao bg-light">
+        <h2 class="titulo-secao">Nossa História e Missão</h2>
+        <div class="grid">
+            <article class="card" style="width: 100%; max-width: 800px; margin: 0 auto; padding: 30px;">
+                <h3>Tradição e Sabor em Cada Prato</h3>
+                <p style="text-align: justify; margin-bottom: 15px;">
+                    Desde 1995, o Restaurante Caseiro tem sido um ponto de encontro para famílias e amigos, oferecendo o conforto da comida feita em casa com a qualidade de um serviço impecável. Nossa missão é resgatar o sabor autêntico da culinária brasileira, utilizando ingredientes frescos e de produtores locais. Acreditamos que a comida é uma forma de carinho e tradição, e cada prato é preparado com dedicação e paixão.
+                </p>
+                <p style="text-align: justify;">
+                    Nosso compromisso é com a excelência, desde a seleção da matéria-prima até a entrega na sua mesa. Venha fazer parte da nossa história e saborear o melhor da comida caseira!
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="secao">
+        <h2 class="titulo-secao">Pratos do Dia</h2>
+
+        <div class="grid">
+            <article class="card">
+                <img src="https://i.pinimg.com/736x/6c/d8/6e/6cd86e4f105acee875ec9ce231a056f5.jpg" alt="Carne de Panela">
+                <h3>Carne de Panela</h3>
+                <p>Acompanha arroz, feijão, salada e farofa.</p>
+                <span class="preco">R$ 22,90</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Carne de Panela', 22.90, ['Carne de Panela', 'Arroz', 'Feijão', 'Salada', 'Farofa'], {'Ponto da Carne': ['Mal Passada', 'Ao Ponto', 'Bem Passada']})">Pedir</button>
+            </article>
+
+            <article class="card">
+                <img src="https://i.pinimg.com/1200x/44/90/82/44908232daa97dd459ff26f016141d26.jpg" alt="Frango Grelhado">
+                <h3>Frango Grelhado</h3>
+                <p>Acompanha arroz, feijão tropeiro e vinagrete.</p>
+                <span class="preco">R$ 21,50</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Frango Grelhado', 21.50, ['Frango Grelhado', 'Arroz', 'Feijão Tropeiro', 'Vinagrete'], {'Tempero': ['Suave', 'Tradicional', 'Picante']})">Pedir</button>
+            </article>
+
+            <article class="card">
+                <img src="https://i.pinimg.com/736x/76/66/d1/7666d150537dddb62afb9a3daddaec44.jpg" alt="Strogonoff de frango">
+                <h3>Strogonoff de frango</h3>
+                <p>Acompanha batata palha e salada.</p>
+                <span class="preco">R$ 29,90</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Strogonoff de frango', 29.90, ['Strogonoff de Frango', 'Arroz', 'Batata Palha', 'Salada'], {'Creme': ['Tradicional', 'Sem Lactose']})">Pedir</button>
+            </article>
+        </div>
+    </section>
+
+    <div class="paralaxe"></div>
+    <!-- COMBOS -->
+    <section id="combos" class="secao bg-light">
+        <h2 class="titulo-secao">Combos Para Compartilhar</h2>
+
+        <div class="grid">
+            <article class="card card-grande">
+                <img src="https://i.pinimg.com/1200x/a1/75/fb/a175fb0b6b2919e58798fc78625205f2.jpg" alt="Combo Família">
+                <h3>Combo Família</h3>
+                <ul class="lista-combo">
+                    <li>Arroz</li>
+                    <li>Feijão</li>
+                    <li>Salada</li>
+                    <li>Carne Assada</li>
+                    <li>Batata Frita</li>
+                </ul>
+                <span class="preco">Serve 3 pessoas — R$ 69,90</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Combo Família', 69.90, ['Arroz', 'Feijão', 'Salada', 'Carne Assada', 'Batata Frita'], {})">Pedir</button>
+            </article>
+
+            <article class="card card-grande">
+                <img src="https://i.pinimg.com/736x/f0/f9/0c/f0f90c33cf789be8c1d8f60018838b9e.jpg" alt="Combo Nordestino">
+                <h3>Combo Nordestino</h3>
+                <ul class="lista-combo">
+                    <li>Baião de Dois</li>
+                    <li>Carne de Sol</li>
+                    <li>Mandioca</li>
+                    <li>Farofa da Casa</li>
+                    <li>Queijo Qualho</li>
+                </ul>
+                <span class="preco">Serve 2 pessoas — R$ 59,90</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Combo Nordestino', 59.90, ['Baião de Dois', 'Carne de Sol', 'Mandioca', 'Farofa da Casa', 'Queijo Qualho'], {})">Pedir</button>
+            </article>
+
+            <article class="card card-grande">
+                <img src="https://i.pinimg.com/1200x/80/b5/44/80b544b4f56e66fde329b8cf8279e3b3.jpg" alt="Combo Carioca">
+                <h3>Combo Carioca</h3>
+                <ul class="lista-combo">
+                    <li>Feijoada caseira</li>
+                    <li>Carne bovina</li>
+                    <li>Linguiça calabresa</li>
+                    <li>Torresmo</li>
+                    <li>Farofa de Mandioca</li>
+                </ul>
+                <span class="preco">Serve 2 pessoas — R$ 59,90</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Combo Carioca', 59.90, ['Feijoada caseira', 'Carne bovina', 'Linguiça calabresa', 'Torresmo', 'Farofa de Mandioca'], {})">Pedir</button>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- RESERVAS E AGENDAMENTOS -->
+    <section id="reservas" class="secao">
+        <h2 class="titulo-secao">Reserve Sua Mesa ou Agende Seu Evento</h2>
+        <div class="grid">
+            <article class="card" style="width: 100%; max-width: 450px; margin: 0 auto; padding: 30px;">
+                <h3>Reservas de Mesa</h3>
+                <p style="margin-bottom: 20px;">
+                    Garanta seu lugar! Faça sua reserva online de forma rápida e segura. Ideal para almoços e jantares em família ou com amigos.
+                </p>
+                <button class="btn" style="width: 100%; text-align: center; cursor: pointer;" onclick="abrirModalReserva()">Fazer Reserva Agora</button>
+            </article>
+
+            <article class="card" style="width: 100%; max-width: 450px; margin: 0 auto; padding: 30px;">
+                <h3>Agendamento de Eventos</h3>
+                <p style="margin-bottom: 20px;">
+                    Nosso espaço é perfeito para pequenos eventos, reuniões e celebrações. Agende uma conversa para planejar seu evento conosco.
+                </p>
+                <button class="btn" style="width: 100%; text-align: center; cursor: pointer;" onclick="abrirModalEvento()">Agendar Evento</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao" class="secao bg-light">
+        <h2 class="titulo-secao">Nossa Localização</h2>
+        <div class="grid-localizacao">
+            <div class="mapa-container">
+                <!-- Simulação de mapa com iframe do Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5543000000003!2d-34.8800000!3d-8.0500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE5JzQ0LjkiUyAzNMKwNTInNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1678899999999!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0; border-radius: var(--radius);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="info-localizacao">
+                <h3>Venha nos Visitar!</h3>
+                <p>Estamos localizados no coração da cidade, com fácil acesso e estacionamento.</p>
+                <p style="margin-top: 20px; font-weight: bold;">Endereço:</p>
+                <p>Rua da Comida Boa, 123 - Centro</p>
+                <p>Cidade, Estado - CEP 12345-678</p>
+                <p style="margin-top: 20px; font-weight: bold;">Horário de Funcionamento:</p>
+                <p>Segunda a Sexta: 8:30h às 17:00h</p>
+                <p>Sábados: 8:30h às 14:00h</p>
+                <a href="https://maps.app.goo.gl/example" target="_blank" class="btn" style="margin-top: 20px; display: inline-block;">Ver no Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="paralaxeone"></div>
+    <!-- BEBIDAS -->
+    <section id="bebidas" class="secao">
+        <h2 class="titulo-secao">Bebidas</h2>
+
+        <div class="grid">
+            <article class="card">
+                <img src="https://i.pinimg.com/736x/90/29/70/90297021d30ec0b7c28d5c118e7df4e4.jpg" alt="Refrigerante Lata">
+                <h3>Refrigerante Lata</h3>
+                <span class="preco">R$ 6,00</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Refrigerante Lata', 6.00, ['Bebida Gelada'], {})">Pedir</button>
+            </article>
+
+            <article class="card">
+                <img src="https://i.pinimg.com/736x/5d/35/13/5d3513ad739761d65b24e50fdfe968ed.jpg" alt="Suco Natural">
+                <h3>Suco Natural</h3>
+                <span class="preco">R$ 8,00</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Suco Natural', 8.00, ['Bebida Natural'], {})">Pedir</button>
+            </article>
+
+            <article class="card">
+                <img src="https://i.pinimg.com/1200x/1f/c8/e5/1fc8e55c427a0b86e8b93272b207cff0.jpg" alt="Cerveja 600ml">
+                <h3>Cerveja 600ml</h3>
+                <span class="preco">R$ 11,90</span>
+                <button class="btn btn-pedido" onclick="abrirModal('Cerveja 600ml', 11.90, ['Bebida Alcoólica'], {})">Pedir</button>
+            </article>
+        </div>
+    </section>
+
+    <a href="https://wa.me/558899999999" target="_blank">
+        <img src="https://i.pinimg.com/736x/40/91/13/40911392ba5b57999db8d435da34ed4f.jpg" alt="Link para WhatsApp" class="Zap">
+    </a>
+
+    <!-- FOOTER -->
+    <footer id="contato">
+        <h2>Contato e Pedidos</h2>
+        <p>WhatsApp: (88) 9999-999</p>
+        <p>Endereço: Rua da Comida Boa, 123</p>
+        <p>Funcionamento: 8:30h às 17h</p>
+        <p style="margin-top: 10px;">Para pedidos, ligue ou use o link do WhatsApp ao lado.</p>
+    </footer>
+
+    <!-- CARRINHO (PAINEL LATERAL) -->
+    <div id="carrinho" class="carrinho">
+        <div class="carrinho-header">
+            <h3>Carrinho</h3>
+            <span id="fechar-carrinho" class="close-btn">&times;</span>
+        </div>
+
+        <div id="carrinho-itens" class="carrinho-itens">
+            <!-- Itens do carrinho aparecem aqui -->
+        </div>
+
+        <div class="carrinho-footer">
+            <strong>Total: <span id="carrinho-total">R$ 0,00</span></strong>
+            <button id="finalizar-pedido" class="btn">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <!-- ÍCONE DO CARRINHO -->
+    <div id="icone-carrinho" class="icone-carrinho">
+        🛒 <span id="contador-carrinho">0</span>
+    </div>
+
+    <!-- MODAL DE PEDIDO -->
+    <div id="modal-pedido" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+            <h2 id="modal-titulo">Nome do Produto</h2>
+            <p id="modal-descricao">Descrição do produto</p>
+            <div id="modal-opcoes">
+                <!-- Opções serão inseridas dinamicamente -->
+            </div>
+            <div class="modal-footer">
+                <span id="modal-preco" class="preco">R$ 0,00</span>
+                <button id="btn-adicionar-carrinho" class="btn">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE RESERVA DE MESAS -->
+    <div id="modal-reserva" class="modal">
+        <div class="modal-content modal-reserva-content">
+            <span class="close-btn" onclick="fecharModalReserva()">&times;</span>
+            <h2>Reservar Mesa</h2>
+            <p style="margin-bottom: 20px; color: #777;">Escolha uma mesa disponível e faça sua reserva</p>
+            
+            <div class="tabela-mesas-container">
+                <table class="tabela-mesas">
+                    <thead>
+                        <tr>
+                            <th>Mesa</th>
+                            <th>Descrição</th>
+                            <th>Capacidade</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-mesas-corpo">
+                        <!-- Mesas serão inseridas dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE AGENDAMENTO DE EVENTOS -->
+    <div id="modal-evento" class="modal">
+        <div class="modal-content modal-evento-content">
+            <span class="close-btn" onclick="fecharModalEvento()">&times;</span>
+            <h2>Agendar Evento</h2>
+            <p style="margin-bottom: 20px; color: #777;">Preencha os dados abaixo para agendar seu evento</p>
+            
+            <form id="formulario-evento" class="formulario-evento">
+                <!-- Tipo de Evento -->
+                <div class="form-group">
+                    <label for="tipo-evento">Tipo de Evento *</label>
+                    <select id="tipo-evento" required>
+                        <option value="">Selecione um tipo</option>
+                        <option value="aniversario">Aniversário</option>
+                        <option value="casamento">Casamento</option>
+                        <option value="surpresa">Festa Surpresa</option>
+                        <option value="corporativo">Evento Corporativo</option>
+                        <option value="reuniao">Reunião de Negócios</option>
+                        <option value="formatura">Formatura</option>
+                        <option value="noivado">Noivado</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Calendário -->
+                <div class="form-group">
+                    <label for="data-evento">Data do Evento *</label>
+                    <input type="date" id="data-evento" required>
+                </div>
+
+                <!-- Hora -->
+                <div class="form-group">
+                    <label for="hora-evento">Hora do Evento *</label>
+                    <input type="time" id="hora-evento" required>
+                </div>
+
+                <!-- Número de Pessoas -->
+                <div class="form-group">
+                    <label for="pessoas-evento">Número de Pessoas Esperadas *</label>
+                    <input type="number" id="pessoas-evento" min="1" max="500" required placeholder="Ex: 50">
+                </div>
+
+                <!-- Orçamento -->
+                <div class="form-group">
+                    <label for="orcamento-evento">Orçamento Estimado (R$) *</label>
+                    <input type="number" id="orcamento-evento" min="0" step="0.01" required placeholder="Ex: 1000.00">
+                </div>
+
+                <!-- Nome do Organizador -->
+                <div class="form-group">
+                    <label for="nome-organizador">Seu Nome *</label>
+                    <input type="text" id="nome-organizador" required placeholder="Ex: João Silva">
+                </div>
+
+                <!-- Telefone -->
+                <div class="form-group">
+                    <label for="telefone-organizador">Telefone/WhatsApp *</label>
+                    <input type="tel" id="telefone-organizador" required placeholder="Ex: (88) 9999-9999">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email-organizador">Email</label>
+                    <input type="email" id="email-organizador" placeholder="Ex: seu@email.com">
+                </div>
+
+                <!-- Descrição do Evento -->
+                <div class="form-group">
+                    <label for="descricao-evento">Descrição/Observações</label>
+                    <textarea id="descricao-evento" rows="4" placeholder="Descreva seu evento, temas, preferências, etc..."></textarea>
+                </div>
+
+                <!-- Serviços Desejados -->
+                <div class="form-group">
+                    <label>Serviços Desejados:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="servicos" value="Buffet">
+                            Buffet
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="servicos" value="Decoração">
+                            Decoração
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="servicos" value="DJ/Música">
+                            DJ/Música
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="servicos" value="Fotografia">
+                            Fotografia
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="servicos" value="Bolo">
+                            Bolo Personalizado
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-cancelar" onclick="fecharModalEvento()">Cancelar</button>
+                    <button type="submit" class="btn">Agendar Evento</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
