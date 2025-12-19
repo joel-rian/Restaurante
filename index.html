@@ -12,20 +12,34 @@
 </head>
 
 <body data-whatsapp="558899999999">
-    
-    <header>
-         <img src="https://i.pinimg.com/736x/84/d9/10/84d9101756ac4cee55d7cb2e066dbe4a.jpg" class="logo" alt="Logo">
 
-        <nav>
-            <a href="#sobre">Nossa História</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#combos">Combos</a>
-            <a href="#bebidas">Bebidas</a>
-            <a href="#localizacao">Localização</a>
-            <a href="#reservas">Reservas</a>
-            <a href="#contato">Contato</a>
+    <header>
+        <nav class="menu">
+            <img src="https://i.pinimg.com/736x/84/d9/10/84d9101756ac4cee55d7cb2e066dbe4a.jpg" class="logo" alt="Logo">
+
+            <a class="menu-item" href="#sobre">Nossa História</a>
+            <a class="menu-item" href="#cardapio">Cardápio</a>
+            <a class="menu-item" href="#combos">Combos</a>
+            <a class="menu-item" href="#bebidas">Bebidas</a>
+            <a class="menu-item" href="#localizacao">Localização</a>
+            <a class="menu-item" href="#reservas">Reservas</a>
+            <a class="menu-item" href="#contato">Contato</a>
         </nav>
     </header>
+
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+    <aside id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">×</span>
+
+        <a href="#sobre">Nossa História</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#combos">Combos</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contato">Contato</a>
+    </aside>
 
     <!-- BANNER / HERO -->
     <section id="banner" class="hero">
@@ -43,10 +57,15 @@
             <article class="card" style="width: 100%; max-width: 800px; margin: 0 auto; padding: 30px;">
                 <h3>Tradição e Sabor em Cada Prato</h3>
                 <p style="text-align: justify; margin-bottom: 15px;">
-                    Desde 1995, o Restaurante Caseiro tem sido um ponto de encontro para famílias e amigos, oferecendo o conforto da comida feita em casa com a qualidade de um serviço impecável. Nossa missão é resgatar o sabor autêntico da culinária brasileira, utilizando ingredientes frescos e de produtores locais. Acreditamos que a comida é uma forma de carinho e tradição, e cada prato é preparado com dedicação e paixão.
+                    Desde 1995, o Restaurante Caseiro tem sido um ponto de encontro para famílias e amigos, oferecendo o
+                    conforto da comida feita em casa com a qualidade de um serviço impecável. Nossa missão é resgatar o
+                    sabor autêntico da culinária brasileira, utilizando ingredientes frescos e de produtores locais.
+                    Acreditamos que a comida é uma forma de carinho e tradição, e cada prato é preparado com dedicação e
+                    paixão.
                 </p>
                 <p style="text-align: justify;">
-                    Nosso compromisso é com a excelência, desde a seleção da matéria-prima até a entrega na sua mesa. Venha fazer parte da nossa história e saborear o melhor da comida caseira!
+                    Nosso compromisso é com a excelência, desde a seleção da matéria-prima até a entrega na sua mesa.
+                    Venha fazer parte da nossa história e saborear o melhor da comida caseira!
                 </p>
             </article>
         </div>
@@ -58,27 +77,33 @@
 
         <div class="grid">
             <article class="card">
-                <img src="https://i.pinimg.com/736x/6c/d8/6e/6cd86e4f105acee875ec9ce231a056f5.jpg" alt="Carne de Panela">
+                <img src="https://i.pinimg.com/736x/6c/d8/6e/6cd86e4f105acee875ec9ce231a056f5.jpg"
+                    alt="Carne de Panela">
                 <h3>Carne de Panela</h3>
                 <p>Acompanha arroz, feijão, salada e farofa.</p>
                 <span class="preco">R$ 22,90</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Carne de Panela', 22.90, ['Carne de Panela', 'Arroz', 'Feijão', 'Salada', 'Farofa'], {'Ponto da Carne': ['Mal Passada', 'Ao Ponto', 'Bem Passada']})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Carne de Panela', 22.90, ['Carne de Panela', 'Arroz', 'Feijão', 'Salada', 'Farofa'], {'Ponto da Carne': ['Mal Passada', 'Ao Ponto', 'Bem Passada']})">Pedir</button>
             </article>
 
             <article class="card">
-                <img src="https://i.pinimg.com/1200x/44/90/82/44908232daa97dd459ff26f016141d26.jpg" alt="Frango Grelhado">
+                <img src="https://i.pinimg.com/1200x/44/90/82/44908232daa97dd459ff26f016141d26.jpg"
+                    alt="Frango Grelhado">
                 <h3>Frango Grelhado</h3>
                 <p>Acompanha arroz, feijão tropeiro e vinagrete.</p>
                 <span class="preco">R$ 21,50</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Frango Grelhado', 21.50, ['Frango Grelhado', 'Arroz', 'Feijão Tropeiro', 'Vinagrete'], {'Tempero': ['Suave', 'Tradicional', 'Picante']})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Frango Grelhado', 21.50, ['Frango Grelhado', 'Arroz', 'Feijão Tropeiro', 'Vinagrete'], {'Tempero': ['Suave', 'Tradicional', 'Picante']})">Pedir</button>
             </article>
 
             <article class="card">
-                <img src="https://i.pinimg.com/736x/76/66/d1/7666d150537dddb62afb9a3daddaec44.jpg" alt="Strogonoff de frango">
+                <img src="https://i.pinimg.com/736x/76/66/d1/7666d150537dddb62afb9a3daddaec44.jpg"
+                    alt="Strogonoff de frango">
                 <h3>Strogonoff de frango</h3>
                 <p>Acompanha batata palha e salada.</p>
                 <span class="preco">R$ 29,90</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Strogonoff de frango', 29.90, ['Strogonoff de Frango', 'Arroz', 'Batata Palha', 'Salada'], {'Creme': ['Tradicional', 'Sem Lactose']})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Strogonoff de frango', 29.90, ['Strogonoff de Frango', 'Arroz', 'Batata Palha', 'Salada'], {'Creme': ['Tradicional', 'Sem Lactose']})">Pedir</button>
             </article>
         </div>
     </section>
@@ -100,11 +125,13 @@
                     <li>Batata Frita</li>
                 </ul>
                 <span class="preco">Serve 3 pessoas — R$ 69,90</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Combo Família', 69.90, ['Arroz', 'Feijão', 'Salada', 'Carne Assada', 'Batata Frita'], {})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Combo Família', 69.90, ['Arroz', 'Feijão', 'Salada', 'Carne Assada', 'Batata Frita'], {})">Pedir</button>
             </article>
 
             <article class="card card-grande">
-                <img src="https://i.pinimg.com/736x/f0/f9/0c/f0f90c33cf789be8c1d8f60018838b9e.jpg" alt="Combo Nordestino">
+                <img src="https://i.pinimg.com/736x/f0/f9/0c/f0f90c33cf789be8c1d8f60018838b9e.jpg"
+                    alt="Combo Nordestino">
                 <h3>Combo Nordestino</h3>
                 <ul class="lista-combo">
                     <li>Baião de Dois</li>
@@ -114,7 +141,8 @@
                     <li>Queijo Qualho</li>
                 </ul>
                 <span class="preco">Serve 2 pessoas — R$ 59,90</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Combo Nordestino', 59.90, ['Baião de Dois', 'Carne de Sol', 'Mandioca', 'Farofa da Casa', 'Queijo Qualho'], {})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Combo Nordestino', 59.90, ['Baião de Dois', 'Carne de Sol', 'Mandioca', 'Farofa da Casa', 'Queijo Qualho'], {})">Pedir</button>
             </article>
 
             <article class="card card-grande">
@@ -128,7 +156,8 @@
                     <li>Farofa de Mandioca</li>
                 </ul>
                 <span class="preco">Serve 2 pessoas — R$ 59,90</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Combo Carioca', 59.90, ['Feijoada caseira', 'Carne bovina', 'Linguiça calabresa', 'Torresmo', 'Farofa de Mandioca'], {})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Combo Carioca', 59.90, ['Feijoada caseira', 'Carne bovina', 'Linguiça calabresa', 'Torresmo', 'Farofa de Mandioca'], {})">Pedir</button>
             </article>
 
         </div>
@@ -141,17 +170,21 @@
             <article class="card" style="width: 100%; max-width: 450px; margin: 0 auto; padding: 30px;">
                 <h3>Reservas de Mesa</h3>
                 <p style="margin-bottom: 20px;">
-                    Garanta seu lugar! Faça sua reserva online de forma rápida e segura. Ideal para almoços e jantares em família ou com amigos.
+                    Garanta seu lugar! Faça sua reserva online de forma rápida e segura. Ideal para almoços e jantares
+                    em família ou com amigos.
                 </p>
-                <button class="btn" style="width: 100%; text-align: center; cursor: pointer;" onclick="abrirModalReserva()">Fazer Reserva Agora</button>
+                <button class="btn" style="width: 100%; text-align: center; cursor: pointer;"
+                    onclick="abrirModalReserva()">Fazer Reserva Agora</button>
             </article>
 
             <article class="card" style="width: 100%; max-width: 450px; margin: 0 auto; padding: 30px;">
                 <h3>Agendamento de Eventos</h3>
                 <p style="margin-bottom: 20px;">
-                    Nosso espaço é perfeito para pequenos eventos, reuniões e celebrações. Agende uma conversa para planejar seu evento conosco.
+                    Nosso espaço é perfeito para pequenos eventos, reuniões e celebrações. Agende uma conversa para
+                    planejar seu evento conosco.
                 </p>
-                <button class="btn" style="width: 100%; text-align: center; cursor: pointer;" onclick="abrirModalEvento()">Agendar Evento</button>
+                <button class="btn" style="width: 100%; text-align: center; cursor: pointer;"
+                    onclick="abrirModalEvento()">Agendar Evento</button>
             </article>
         </div>
     </section>
@@ -162,7 +195,10 @@
         <div class="grid-localizacao">
             <div class="mapa-container">
                 <!-- Simulação de mapa com iframe do Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5543000000003!2d-34.8800000!3d-8.0500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE5JzQ0LjkiUyAzNMKwNTInNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1678899999999!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0; border-radius: var(--radius);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5543000000003!2d-34.8800000!3d-8.0500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE5JzQ0LjkiUyAzNMKwNTInNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1678899999999!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0; border-radius: var(--radius);" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="info-localizacao">
                 <h3>Venha nos Visitar!</h3>
@@ -173,7 +209,8 @@
                 <p style="margin-top: 20px; font-weight: bold;">Horário de Funcionamento:</p>
                 <p>Segunda a Sexta: 8:30h às 17:00h</p>
                 <p>Sábados: 8:30h às 14:00h</p>
-                <a href="https://maps.app.goo.gl/example" target="_blank" class="btn" style="margin-top: 20px; display: inline-block;">Ver no Google Maps</a>
+                <a href="https://maps.app.goo.gl/example" target="_blank" class="btn"
+                    style="margin-top: 20px; display: inline-block;">Ver no Google Maps</a>
             </div>
         </div>
     </section>
@@ -185,24 +222,28 @@
 
         <div class="grid">
             <article class="card">
-                <img src="https://i.pinimg.com/736x/90/29/70/90297021d30ec0b7c28d5c118e7df4e4.jpg" alt="Refrigerante Lata">
+                <img src="https://i.pinimg.com/736x/90/29/70/90297021d30ec0b7c28d5c118e7df4e4.jpg"
+                    alt="Refrigerante Lata">
                 <h3>Refrigerante Lata</h3>
                 <span class="preco">R$ 6,00</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Refrigerante Lata', 6.00, ['Bebida Gelada'], {})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Refrigerante Lata', 6.00, ['Bebida Gelada'], {})">Pedir</button>
             </article>
 
             <article class="card">
                 <img src="https://i.pinimg.com/736x/5d/35/13/5d3513ad739761d65b24e50fdfe968ed.jpg" alt="Suco Natural">
                 <h3>Suco Natural</h3>
                 <span class="preco">R$ 8,00</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Suco Natural', 8.00, ['Bebida Natural'], {})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Suco Natural', 8.00, ['Bebida Natural'], {})">Pedir</button>
             </article>
 
             <article class="card">
                 <img src="https://i.pinimg.com/1200x/1f/c8/e5/1fc8e55c427a0b86e8b93272b207cff0.jpg" alt="Cerveja 600ml">
                 <h3>Cerveja 600ml</h3>
                 <span class="preco">R$ 11,90</span>
-                <button class="btn btn-pedido" onclick="abrirModal('Cerveja 600ml', 11.90, ['Bebida Alcoólica'], {})">Pedir</button>
+                <button class="btn btn-pedido"
+                    onclick="abrirModal('Cerveja 600ml', 11.90, ['Bebida Alcoólica'], {})">Pedir</button>
             </article>
         </div>
     </section>
@@ -260,7 +301,7 @@
             <span class="close-btn" onclick="fecharModalReserva()">&times;</span>
             <h2>Reservar Mesa</h2>
             <p style="margin-bottom: 20px; color: #777;">Escolha uma mesa disponível e faça sua reserva</p>
-            
+
             <div class="tabela-mesas-container">
                 <table class="tabela-mesas">
                     <thead>
@@ -285,7 +326,7 @@
             <span class="close-btn" onclick="fecharModalEvento()">&times;</span>
             <h2>Agendar Evento</h2>
             <p style="margin-bottom: 20px; color: #777;">Preencha os dados abaixo para agendar seu evento</p>
-            
+
             <form id="formulario-evento" class="formulario-evento">
                 <!-- Tipo de Evento -->
                 <div class="form-group">
@@ -348,7 +389,8 @@
                 <!-- Descrição do Evento -->
                 <div class="form-group">
                     <label for="descricao-evento">Descrição/Observações</label>
-                    <textarea id="descricao-evento" rows="4" placeholder="Descreva seu evento, temas, preferências, etc..."></textarea>
+                    <textarea id="descricao-evento" rows="4"
+                        placeholder="Descreva seu evento, temas, preferências, etc..."></textarea>
                 </div>
 
                 <!-- Serviços Desejados -->
@@ -386,7 +428,7 @@
             </form>
         </div>
     </div>
-<script async src="https://app.gptmaker.ai/widget/3EBD47EE8E6DE356ACDCEA1FC0D685FC/float.js">
+    <script async src="https://app.gptmaker.ai/widget/3EBD47EE8E6DE356ACDCEA1FC0D685FC/float.js">
     </script>
     <script src="javascript.js"></script>
 </body>

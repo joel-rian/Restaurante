@@ -237,6 +237,7 @@ header nav a:hover {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
     .info-localizacao {
         margin-top: 30px;
     }
@@ -569,70 +570,231 @@ footer {
     background-color: #777;
 }
 
+.hide-ui {
+    display: none !important;
+}
+
 /* Responsividade do Modal */
-@media (max-width: 600px) {
-    .modal-content {
-        margin: 10% auto;
-        width: 95%;
+/* ============================================
+   RESPONSIVIDADE EXTRA (SEM ALTERAR O CÓDIGO)
+============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 16px 4%;
+    }
+
+    .menu a[href="#contato"] {
+        display: none;
+    }
+
+    .hero {
+        height: 320px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .card img {
+        height: 240px;
+    }
+
+    .carrinho {
+        width: 300px;
     }
 }
 
-/* Ajustes de Responsividade Geral */
-@media (max-width: 450px) {
-    .secao {
-        padding: 40px 4%;
-    }
-    
-    .titulo-secao {
-        font-size: 28px;
-    }
-    
-    .hero-text h2 {
-        font-size: 28px;
-    }
-    
-    .hero {
-        height: 300px;
-        margin-top: 60px;
-    }
-    
-    .hero-text {
-        padding: 15px;
-    }
+/* Smartphones grandes */
+@media (max-width: 768px) {
 
-    /* Ajustes de Localização */
-    .grid-localizacao {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .info-localizacao {
-        margin-top: 30px;
-    }
-
-    /* Ajustes do Header e Navegação */
     header {
-        padding: 15px 4%;
         flex-direction: column;
         align-items: flex-start;
-        position: relative;
-        height: auto;
+        gap: 10px;
     }
-    
+
+    .menu a[href="#localizacao"] {
+        display: none;
+    }
+
     header nav {
-        flex-direction: column;
-        gap: 5px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 30px 4%;
+    }
+
+    .hero-text {
         width: 100%;
-        margin-top: 10px;
     }
 
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .icone-carrinho {
+        top: auto;
+        bottom: 100px;
+        right: 15px;
+    }
+
+    .Zap {
+        width: 60px;
+        height: 60px;
+        right: 15px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 649px) {
+.menu a[href="#reservas"] {
+        display: none;
+    }
+}
+
+@media (max-width: 543px) {
+.menu a[href="#bebidas"] {
+        display: none;
+    }
+}
+/* Smartphones pequenos (320px / 360px) */
+/* ===============================
+   MENU MOBILE (APENAS SMARTPHONES)
+   =============================== */
+@media (max-width: 480px) {
+
+    /* trava o scroll quando sidebar está aberta */
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+    /* Esconde o menu normal */
     header nav a {
-        padding: 5px 0;
-        border-bottom: 1px solid #eee;
+        display: none;
     }
 
-    header .logo {
-        padding-left: 0;
-        padding-bottom: 0;
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Botão hamburguer */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 260px;
+        height: 100%;
+        background: white;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 10000;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--dark);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    .titulo-secao {
+        font-size: 26px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modal-footer .preco {
+        font-size: 22px;
+    }
+
+    .carrinho {
+        width: 100%;
+        right: -100%;
+    }
+
+    .carrinho.aberto {
+        right: 0;
+    }
+}
+
+/* Telas muito grandes (4K / ultrawide) */
+@media (min-width: 1600px) {
+
+    .secao {
+        padding: 90px 10%;
+    }
+
+    header {
+        padding: 22px 10%;
+    }
+
+    .hero-text h2 {
+        font-size: 40px;
+    }
+
+    .titulo-secao {
+        font-size: 38px;
     }
 }
