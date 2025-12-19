@@ -321,7 +321,7 @@ header nav a:hover {
     font-size: 18px;
     box-shadow: var(--shadow);
     cursor: pointer;
-    z-index: 9999;
+    z-index: 999;
 }
 
 #contador-carrinho {
