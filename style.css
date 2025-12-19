@@ -1,43 +1,23 @@
-/* ============================================================
-   RESET & BASE
-============================================================ */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
-img {
-    width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* ============================================================
-   VARIÁVEIS
-============================================================ */
 :root {
     --primary: #b63b2e;
     --primary-light: #d75c4e;
     --dark: #2b2b2b;
     --gray: #777;
     --light: #fff7f0;
-
     --radius: 14px;
     --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-
     --font-title: "Georgia", serif;
     --font-body: "Verdana", sans-serif;
 }
 
-/* ============================================================
-   GLOBAL
-============================================================ */
+/* GLOBAL */
 body {
     font-family: var(--font-body);
     background: var(--light);
@@ -51,17 +31,39 @@ body {
     border-radius: 70px;
 }
 
-/* ============================================================
-   HEADER
-============================================================ */
+.paralaxe {
+    background: url("https://i.pinimg.com/1200x/40/11/28/401128ea767d83ccaff626de270e2323.jpg") fixed no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+.paralaxeone {
+    background: url("https://i.pinimg.com/1200x/96/64/1d/96641d5d40abb52eb5159ade26aa715d.jpg") fixed no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
 header {
     position: fixed;
-    top: 0;
     width: 100%;
-    padding: 18px 6%;
+    top: 0;
     background: white;
     display: flex;
     justify-content: space-between;
+    padding: 18px 6%;
     box-shadow: var(--shadow);
     z-index: 100;
 }
@@ -74,6 +76,7 @@ header .logo {
 header nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -86,17 +89,14 @@ header nav a:hover {
     color: var(--primary);
 }
 
-/* ============================================================
-   HERO
-============================================================ */
+/* HERO */
 .hero {
     height: 380px;
-    margin-top: 85px;
-    padding: 0 6%;
+    background: url(https://images.unsplash.com/photo-1525755662778-989d0524087e) center/cover no-repeat;
     display: flex;
     align-items: center;
-    background: url(https://images.unsplash.com/photo-1525755662778-989d0524087e)
-        center / cover no-repeat;
+    padding: 0 6%;
+    margin-top: 85px;
 }
 
 .hero-text {
@@ -113,31 +113,26 @@ header nav a:hover {
 }
 
 .hero-text p {
-    color: var(--gray);
     margin-bottom: 18px;
+    color: var(--gray);
 }
 
-/* ============================================================
-   BOTÕES
-============================================================ */
 .btn {
     background: var(--primary);
-    color: white;
     padding: 12px 26px;
     border-radius: var(--radius);
-    border: none;
+    color: white;
     font-weight: bold;
-    cursor: pointer;
     transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     background: var(--primary-light);
 }
 
-/* ============================================================
-   SEÇÕES
-============================================================ */
+/* SEÇÕES */
 .secao {
     padding: 70px 6%;
 }
@@ -153,32 +148,37 @@ header nav a:hover {
     margin-bottom: 35px;
 }
 
-/* ============================================================
-   GRID
-============================================================ */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    text-align: center;
+}
+
+/* CARDS */
+.card {
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding-bottom: 20px;
+    width: 100%;
+    height: auto;
 }
 
 .grid button {
     width: 100%;
 }
 
-/* ============================================================
-   CARDS
-============================================================ */
-.card {
-    background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    padding-bottom: 20px;
+.grid {
+    text-align: center;
 }
 
 .card img {
+    width: 100%;
     height: 300px;
     object-fit: cover;
 }
@@ -190,8 +190,8 @@ header nav a:hover {
 
 .card p {
     padding: 0 15px;
-    font-size: 15px;
     color: var(--gray);
+    font-size: 15px;
 }
 
 .card .preco {
@@ -211,16 +211,15 @@ header nav a:hover {
     margin-bottom: 6px;
 }
 
-/* ============================================================
-   LOCALIZAÇÃO
-============================================================ */
+/* LOCALIZAÇÃO */
 .grid-localizacao {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
     align-items: center;
+    text-align: left;
 }
 
 .info-localizacao h3 {
@@ -233,16 +232,24 @@ header nav a:hover {
     margin-bottom: 8px;
 }
 
-/* ============================================================
-   BOTÃO WHATSAPP
-============================================================ */
+@media (max-width: 900px) {
+    .grid-localizacao {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .info-localizacao {
+        margin-top: 30px;
+    }
+}
+
 .Zap {
+    width: 70px;
+    border-radius: 100px;
+    height: 70px;
     position: fixed;
     right: 20px;
     bottom: 20px;
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
     border: 2px solid rgba(0, 140, 255, 0.55);
     box-shadow: 0 0 12px rgba(0, 150, 255, 0.4);
     transition: 0.25s;
@@ -253,45 +260,65 @@ header nav a:hover {
     cursor: pointer;
 }
 
-/* ============================================================
-   CARRINHO
-============================================================ */
+/* PAINEL LATERAL DO CARRINHO */
 .carrinho {
     position: fixed;
-    top: 0;
     right: -400px;
+    top: 0;
     width: 340px;
     height: 100%;
-    padding: 20px;
     background: white;
     box-shadow: -4px 0 14px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
     transition: 0.3s;
     z-index: 9999;
+    display: flex;
+    flex-direction: column;
 }
 
 .carrinho.aberto {
     right: 0;
 }
 
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .carrinho-itens {
     flex: 1;
     overflow-y: auto;
     margin-bottom: 20px;
+    max-height: 60vh;
 }
 
-/* ============================================================
-   ÍCONE CARRINHO
-============================================================ */
+.carrinho-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-item strong {
+    display: block;
+}
+
+.carrinho-footer {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* ÍCONE DO CARRINHO */
 .icone-carrinho {
     position: fixed;
     right: 20px;
     top: 100px;
-    padding: 12px 18px;
     background: var(--primary);
     color: white;
+    padding: 12px 18px;
     border-radius: 50px;
+    font-size: 18px;
     box-shadow: var(--shadow);
     cursor: pointer;
     z-index: 9999;
@@ -302,12 +329,10 @@ header nav a:hover {
     color: var(--primary);
     padding: 3px 7px;
     border-radius: 50%;
+    margin-left: 5px;
     font-weight: bold;
 }
 
-/* ============================================================
-   FOOTER
-============================================================ */
 footer {
     background: var(--dark);
     color: white;
@@ -315,33 +340,461 @@ footer {
     text-align: center;
 }
 
-/* ============================================================
-   RESPONSIVIDADE
-============================================================ */
-@media (max-width: 900px) {
-    .grid-localizacao {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+/* MODAL DE PEDIDO */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
 }
 
-@media (max-width: 450px) {
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-titulo {
+    font-family: var(--font-title);
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+#modal-descricao {
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+#modal-opcoes h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#modal-opcoes label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.modal-footer .preco {
+    font-size: 24px;
+}
+
+/* TABELA DE MESAS */
+.modal-reserva-content {
+    max-width: 800px;
+}
+
+.tabela-mesas-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tabela-mesas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-mesas thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+.tabela-mesas th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.tabela-mesas td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabela-mesas tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.tabela-mesas tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.btn-reservar {
+    background-color: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-reservar:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-reservar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* FORMULARIO DE EVENTOS */
+.modal-evento-content {
+    max-width: 700px;
+}
+
+.formulario-evento {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(182, 59, 46, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    flex: 1;
+    max-width: 200px;
+}
+
+.btn-cancelar {
+    background-color: #999;
+}
+
+.btn-cancelar:hover {
+    background-color: #777;
+}
+
+.hide-ui {
+    display: none !important;
+}
+
+/* Responsividade do Modal */
+/* ============================================
+   RESPONSIVIDADE EXTRA (SEM ALTERAR O CÓDIGO)
+============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 16px 4%;
     }
 
-    header nav {
-        flex-direction: column;
-        width: 100%;
+    .menu a[href="#contato"] {
+        display: none;
     }
 
     .hero {
-        height: 300px;
-        margin-top: 60px;
+        height: 320px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .card img {
+        height: 240px;
+    }
+
+    .carrinho {
+        width: 300px;
+    }
+}
+
+/* Smartphones grandes */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .menu a[href="#localizacao"] {
+        display: none;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 30px 4%;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .icone-carrinho {
+        top: auto;
+        bottom: 100px;
+        right: 15px;
+    }
+
+    .Zap {
+        width: 60px;
+        height: 60px;
+        right: 15px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 649px) {
+.menu a[href="#reservas"] {
+        display: none;
+    }
+}
+
+@media (max-width: 543px) {
+.menu a[href="#bebidas"] {
+        display: none;
+    }
+}
+/* Smartphones pequenos (320px / 360px) */
+/* ===============================
+   MENU MOBILE (APENAS SMARTPHONES)
+   =============================== */
+@media (max-width: 480px) {
+
+    /* trava o scroll quando sidebar está aberta */
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+    /* Esconde o menu normal */
+    header nav a {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Botão hamburguer */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 260px;
+        height: 100%;
+        background: white;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 10000;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--dark);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+    .hero-text h2 {
+        font-size: 24px;
     }
 
     .titulo-secao {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modal-footer .preco {
+        font-size: 22px;
+    }
+
+    .carrinho {
+        width: 100%;
+        right: -100%;
+    }
+
+    .carrinho.aberto {
+        right: 0;
+    }
+}
+
+/* Telas muito grandes (4K / ultrawide) */
+@media (min-width: 1600px) {
+
+    .secao {
+        padding: 90px 10%;
+    }
+
+    header {
+        padding: 22px 10%;
+    }
+
+    .hero-text h2 {
+        font-size: 40px;
+    }
+
+    .titulo-secao {
+        font-size: 38px;
     }
 }

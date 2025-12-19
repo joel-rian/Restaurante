@@ -612,3 +612,18 @@ window.onclick = function(event) {
         modalEvento.style.display = 'none';
     }
 };
+
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.querySelector(".menu-toggle");
+
+    const isOpen = sidebar.classList.toggle("active");
+
+    if (isOpen) {
+        menuBtn.style.display = "none";
+        document.body.classList.add("no-scroll");
+    } else {
+        menuBtn.style.display = "block";
+        document.body.classList.remove("no-scroll");
+    }
+}

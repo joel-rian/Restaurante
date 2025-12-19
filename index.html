@@ -7,24 +7,39 @@
     <meta name="description" content="Restaurante Caseiro - Comida Caseira com Qualidade">
     <meta name="keywords" content="restaurante, comida caseira, delivery, comida">
     <meta name="author" content="Restaurante Caseiro">
-    <title>Restaurante</title>
+    <title>Restaurante Caseiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-whatsapp="558899999999">
 
     <header>
-        <img src="https://i.pinimg.com/736x/84/d9/10/84d9101756ac4cee55d7cb2e066dbe4a.jpg" class="logo" alt="Logo">
-        <nav>
-            <a href="#sobre">Nossa História</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#combos">Combos</a>
-            <a href="#bebidas">Bebidas</a>
-            <a href="#localizacao">Localização</a>
-            <a href="#reservas">Reservas</a>
-            <a href="#contato">Contato</a>
+        <nav class="menu">
+            <img src="https://i.pinimg.com/736x/84/d9/10/84d9101756ac4cee55d7cb2e066dbe4a.jpg" class="logo" alt="Logo">
+
+            <a class="menu-item" href="#sobre">Nossa História</a>
+            <a class="menu-item" href="#cardapio">Cardápio</a>
+            <a class="menu-item" href="#combos">Combos</a>
+            <a class="menu-item" href="#bebidas">Bebidas</a>
+            <a class="menu-item" href="#localizacao">Localização</a>
+            <a class="menu-item" href="#reservas">Reservas</a>
+            <a class="menu-item" href="#contato">Contato</a>
         </nav>
     </header>
+
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+    <aside id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">×</span>
+
+        <a href="#sobre">Nossa História</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#combos">Combos</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contato">Contato</a>
+    </aside>
 
     <!-- BANNER / HERO -->
     <section id="banner" class="hero">
@@ -93,7 +108,7 @@
         </div>
     </section>
 
-
+    <div class="paralaxe"></div>
     <!-- COMBOS -->
     <section id="combos" class="secao bg-light">
         <h2 class="titulo-secao">Combos Para Compartilhar</h2>
@@ -200,7 +215,7 @@
         </div>
     </section>
 
-
+    <div class="paralaxeone"></div>
     <!-- BEBIDAS -->
     <section id="bebidas" class="secao">
         <h2 class="titulo-secao">Bebidas</h2>
@@ -232,10 +247,6 @@
             </article>
         </div>
     </section>
-
-    <!-- Atendente do restaurante -->
-    <script async src="https://app.gptmaker.ai/widget/3EBD47EE8E6DE356ACDCEA1FC0D685FC/float.js">
-    </script>
 
     <!-- FOOTER -->
     <footer id="contato">
@@ -417,7 +428,8 @@
             </form>
         </div>
     </div>
-
+    <script async src="https://app.gptmaker.ai/widget/3EBD47EE8E6DE356ACDCEA1FC0D685FC/float.js">
+    </script>
     <script src="javascript.js"></script>
 </body>
 
