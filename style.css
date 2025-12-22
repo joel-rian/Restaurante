@@ -24,6 +24,10 @@ body {
     color: var(--dark);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .logo {
     display: flex;
     align-items: center;

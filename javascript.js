@@ -617,13 +617,42 @@ function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const menuBtn = document.querySelector(".menu-toggle");
 
+    if (!sidebar || !menuBtn) return;
+
     const isOpen = sidebar.classList.toggle("active");
 
-    if (isOpen) {
-        menuBtn.style.display = "none";
-        document.body.classList.add("no-scroll");
-    } else {
-        menuBtn.style.display = "block";
-        document.body.classList.remove("no-scroll");
-    }
+    menuBtn.classList.toggle("hidden", isOpen);
+    document.body.classList.toggle("no-scrool", isOpen);
+
+    sidebar.setAttribute("aria-hidden", !isOpen);
 }
+
+document.querySelectorAll(".sidebar-nav a").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // evita o salto brusco
+
+    const destino = this.getAttribute("href");
+    const alvo = document.querySelector(destino);
+
+    if (alvo) {
+      // fecha o sidebar
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.remove("active");
+
+      // libera o scroll
+      document.body.style.overflow = "auto";
+
+      // volta botão do menu
+      const menuToggle = document.querySelector(".menu-toggle");
+      if (menuToggle) menuToggle.style.display = "block";
+
+      // scroll suave até a seção
+      setTimeout(() => {
+        alvo.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 200);
+    }
+  });
+});
